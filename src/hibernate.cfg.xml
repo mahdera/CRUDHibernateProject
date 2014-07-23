@@ -32,7 +32,7 @@
 
         <!-- Database connection settings -->
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:8889/hibernatedb</property>
+        <property name="connection.url">jdbc:mysql://localhost:8889/crudhibernatedb</property>
         <property name="connection.username">root</property>
         <property name="connection.password">root</property>
 
@@ -49,12 +49,10 @@
         <property name="show_sql">true</property>
 
         <!-- Drop and re-create the database schema on startup creates if table does not exist and keeps updating the records...-->
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         
         <!-- Names the annotated class -->
-        <mapping class="com.mahder.hibernate.inheritance.study.Automobile"/>
-        <mapping class="com.mahder.hibernate.inheritance.study.TwoWheeler"/>
-        <mapping class="com.mahder.hibernate.inheritance.study.FourWheeler"/>
+        <mapping class="com.mahder.hibernate.crud.study.User"/>        
     </session-factory>
 
 </hibernate-configuration>
